@@ -27,15 +27,15 @@ frontend/web/index.php
 
 ```php
 <?php
-require basedir(basedir(__DIR__)) . '/vendor/maybeworks/yii2-app.bootstrap/AppBootstrap.php';
+require dirname(dirname(__DIR__)) . '/vendor/maybeworks/yii2-app.bootstrap/AppBootstrap.php';
 
 (new AppBootstrap(
     [
         'name' => 'frontend',
         'type' => AppBootstrap::APP_WEB,
-        'baseDir' => basedir(basedir(__DIR__)),
-        'vendorDir' => basedir(basedir(__DIR__)) . '/vendor',
-        'bootConfig' => basedir(basedir(__DIR__)) . '/config/bootstrap.php'
+        'baseDir' => dirname(dirname(__DIR__)),
+        'vendorDir' => dirname(dirname(__DIR__)) . '/vendor',
+        'bootConfig' => dirname(dirname(__DIR__)) . '/config/bootstrap.php'
     ]
 ))->run();
 ```
@@ -44,16 +44,16 @@ yii.php for cmd
 ```php
 #!/usr/bin/env php
 <?php
-require basedir(basedir(__DIR__)) . '/vendor/maybeworks/yii2-app.bootstrap/AppBootstrap.php';
+require dirname(dirname(__DIR__)) . '/vendor/maybeworks/yii2-app.bootstrap/AppBootstrap.php';
 
 exit(
     (new AppBootstrap(
         [
             'name' => 'console',
             'type' => AppBootstrap::APP_CONSOLE,
-            'baseDir' => basedir(basedir(__DIR__)),
-            'vendorDir' => basedir(basedir(__DIR__)) . '/vendor',
-            'bootConfig' => basedir(basedir(__DIR__)) . '/config/bootstrap.php'
+            'baseDir' => dirname(dirname(__DIR__)),
+            'vendorDir' => dirname(dirname(__DIR__)) . '/vendor',
+            'bootConfig' => dirname(dirname(__DIR__)) . '/config/bootstrap.php'
         ]
     ))->run()
 );
