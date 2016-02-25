@@ -44,16 +44,16 @@ yii.php for cmd
 ```php
 #!/usr/bin/env php
 <?php
-require dirname(dirname(__DIR__)) . '/vendor/maybeworks/yii2-app.bootstrap/AppBootstrap.php';
+require __DIR__ . '/vendor/maybeworks/yii2-app.bootstrap/AppBootstrap.php';
 
 exit(
     (new AppBootstrap(
         [
             'name' => 'console',
             'type' => AppBootstrap::APP_CONSOLE,
-            'baseDir' => dirname(dirname(__DIR__)),
-            'vendorDir' => dirname(dirname(__DIR__)) . '/vendor',
-            'bootConfig' => dirname(dirname(__DIR__)) . '/config/bootstrap.php'
+            'baseDir' => __DIR__,
+            'vendorDir' => __DIR__ . '/vendor',
+            'bootConfig' => __DIR__ . '/config/bootstrap.php'
         ]
     ))->run()
 );
