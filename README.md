@@ -65,7 +65,7 @@ Alternative project structure
 └── yii
 ```
 
-local config example
+Local config example - config/local.php
 ```php
 <?php
 /**
@@ -99,7 +99,7 @@ return [
 
 ```
 
-frontend/web/index.php
+Index file for main web point - web/frontend/index.php
 
 ```php
 <?php
