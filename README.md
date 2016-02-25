@@ -23,6 +23,48 @@ to the require section of your application's `composer.json` file.
 
 Usage
 -----
+Alternative project structure
+```
+.
+├── apps
+│   ├── backend
+│   │    └── ...
+│   ├── console
+│   │    └── ...
+│   └── frontend
+│         └── ...
+├── common
+│   └── ...
+├── config
+│   ├── backend.php
+│   ├── bootstrap.php
+│   ├── common.php
+│   ├── console.php
+│   ├── frontend.php
+│   ├── local-example.php
+│   └── local.php
+├── db
+│   ├── fixtures
+│   │   └── ...
+│   └── migrations
+│        └── ...
+├── runtime
+│   └── ...
+├── vendor
+│   └── ...
+├── web
+│   ├── backend
+│   │   ├── favicon.ico
+│   │   └── index.php
+│   ├── frontend
+│   │   ├── favicon.ico
+│   │   └── index.php
+│   └── static
+│       └── assets
+│           └── ...
+└── yii
+```
+
 frontend/web/index.php
 
 ```php
