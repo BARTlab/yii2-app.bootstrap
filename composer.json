@@ -1,0 +1,17 @@
+{
+    "name": "maybeworks/yii2-app.bootstrap",
+    "description": "Application runner for Yii PHP framework 2.0",
+    "keywords": ["yii", "extension", "library", "app"],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "B@RT",
+            "email": "bart@maybeworks.com",
+            "homepage": "http://maybe.works"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    }
+}
