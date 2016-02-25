@@ -65,6 +65,40 @@ Alternative project structure
 └── yii
 ```
 
+local config example
+```php
+<?php
+/**
+ * @var $this AppBootstrap
+ */
+return [
+    'common' => [
+        'components' => [
+            'db' => [
+                'dsn' => 'mysql:host=localhost;dbname=yii2-app',
+                'username' => 'root',
+                'password' => '',
+            ],
+            'mailer' => [
+                'useFileTransport' => true,
+            ],
+        ],
+    ],
+    'backend' => [],
+    'frontend' => [],
+    'bootstrap' => [
+        'debug' => true,
+        'env' => $this::ENV_DEV,
+        'aliases' => [
+            'web_frontend' => 'http://site.local',
+            'web_backend' => 'http://admin.site.local',
+            'web_static' => 'http://static.site.local'
+        ]
+    ],
+];
+
+```
+
 frontend/web/index.php
 
 ```php
